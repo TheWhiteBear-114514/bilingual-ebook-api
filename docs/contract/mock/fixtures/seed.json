@@ -1,0 +1,217 @@
+{
+  "auth": {
+    "token": "mock-token-demo",
+    "user": {
+      "id": 2,
+      "email": "demo@book.app",
+      "nickname": "演示用户",
+      "points": 138,
+      "role": "user",
+      "is_active": true,
+      "ban_reason": null,
+      "created_at": "2026-09-20T10:12:00",
+      "last_login_at": "2026-09-27T21:02:30"
+    }
+  },
+  "admin_auth": {
+    "token": "mock-token-admin",
+    "user": {
+      "id": 1,
+      "email": "admin@book.app",
+      "nickname": "管理员",
+      "points": 0,
+      "role": "admin",
+      "is_active": true,
+      "ban_reason": null,
+      "created_at": "2026-09-18T08:00:00",
+      "last_login_at": "2026-09-27T21:30:00"
+    }
+  },
+  "notices": [
+    {
+      "id": 3,
+      "type": "maintenance",
+      "title": "计划维护：2026-09-28（周日）23:00–24:00 平台整体升级",
+      "body": "为提升双语书生成服务的稳定性，平台将于 2026 年 9 月 28 日（周日）23:00 至 24:00 进行整体升级。\n\n维护期间：文件上传与翻译生成将临时不可用；已生成的双语书可正常查看与下载。",
+      "is_active": true,
+      "views": 486,
+      "created_at": "2026-09-27T18:30:00",
+      "updated_at": "2026-09-27T18:30:00"
+    },
+    {
+      "id": 2,
+      "type": "update",
+      "title": "新功能：PDF 导出支持自定义页面尺寸与页眉页脚",
+      "body": "双语书导出模块已升级：PDF 导出现在支持选择页面尺寸（A5 / A4 / 6 英寸）与自定义页眉页脚文字。",
+      "is_active": true,
+      "views": 1203,
+      "created_at": "2026-09-25T10:12:00",
+      "updated_at": "2026-09-25T10:12:00"
+    },
+    {
+      "id": 1,
+      "type": "system",
+      "title": "安全提示：请妥善保管您的 API Key，平台不保存您的任何密钥",
+      "body": "本平台采用 BYOK 模式：翻译使用您自行申请的 API Key，密钥仅在本次翻译请求中生效，服务端不存储、不写入日志。",
+      "is_active": true,
+      "views": 2210,
+      "created_at": "2026-09-20T09:00:00",
+      "updated_at": "2026-09-20T09:00:00"
+    }
+  ],
+  "engines": {
+    "default": "official",
+    "engines": [
+      { "id": "official", "name": "官方引擎（积分）", "official": true, "key_fields": [], "src_langs": ["zh", "en", "ja", "ko", "fr", "de"], "tgt_langs": ["zh", "en", "ja", "ko", "fr", "de"], "enabled": true },
+      { "id": "baidu", "name": "百度翻译", "official": false, "key_fields": [{ "k": "app_id", "label": "App ID", "type": "text" }, { "k": "app_key", "label": "App Key", "type": "password" }], "src_langs": ["zh", "en", "ja", "ko", "fr", "de"], "tgt_langs": ["zh", "en", "ja", "ko", "fr", "de"], "enabled": true },
+      { "id": "youdao", "name": "有道智云", "official": false, "key_fields": [{ "k": "app_key", "label": "appKey", "type": "text" }, { "k": "secret_key", "label": "secretKey", "type": "password" }], "src_langs": ["zh", "en", "ja", "ko", "fr", "de"], "tgt_langs": ["zh", "en", "ja", "ko", "fr", "de"], "enabled": true },
+      { "id": "deepl", "name": "DeepL", "official": false, "key_fields": [{ "k": "api_key", "label": "API Key", "type": "password" }], "src_langs": ["zh", "en", "ja", "ko", "fr", "de"], "tgt_langs": ["zh", "en", "ja", "ko", "fr", "de"], "enabled": true }
+    ]
+  },
+  "languages": { "source_langs": ["zh", "en", "ja", "ko", "fr", "de"], "target_langs": ["zh", "en", "ja", "ko", "fr", "de"] },
+  "books": {
+    "total": 1,
+    "page": 1,
+    "size": 12,
+    "items": [
+      { "id": 1, "title": "Pride and Prejudice", "source_ext": "epub", "source_lang": "en", "target_lang": "zh", "engine": "official", "status": "ready", "progress": 100, "char_count": 6240, "cached_segments": 2, "segment_count": 10, "failed_segments": 1, "error_msg": null, "epub_url": "/api/books/1/download?format=epub", "pdf_url": "/api/books/1/download?format=pdf", "created_at": "2026-09-20T15:42:00", "started_at": "2026-09-20T15:42:05", "finished_at": "2026-09-20T15:43:19" }
+    ]
+  },
+  "book_detail": {
+    "id": 1,
+    "title": "Pride and Prejudice",
+    "source_ext": "epub",
+    "source_lang": "en",
+    "target_lang": "zh",
+    "engine": "official",
+    "status": "ready",
+    "progress": 100,
+    "char_count": 6240,
+    "cached_segments": 2,
+    "segment_count": 10,
+    "failed_segments": 1,
+    "error_msg": null,
+    "epub_url": "/api/books/1/download?format=epub",
+    "pdf_url": "/api/books/1/download?format=pdf",
+    "created_at": "2026-09-20T15:42:00",
+    "started_at": "2026-09-20T15:42:05",
+    "finished_at": "2026-09-20T15:43:19",
+    "segments": [
+      { "id": 1, "seq": 1, "source_text": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.", "translated_text": "凡是有钱的单身汉，总想娶位太太，这已经成了一条举世公认的真理。", "is_failed": false },
+      { "id": 2, "seq": 2, "source_text": "However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.", "translated_text": "不管这样一个人的心情或见解在初进一个地区时多么不为人所知，这条真理却总是牢牢记在周围各家各户的心里，他被看作是他们某位女儿的准财产。", "is_failed": false },
+      { "id": 3, "seq": 3, "source_text": "My dear Mr. Bennet, said his lady to him one day, have you heard that Netherfield Park is let at last?", "translated_text": null, "is_failed": true },
+      { "id": 4, "seq": 4, "source_text": "Mr. Bennet replied that he had not.", "translated_text": "班纳特先生回答说他还没有听说。", "is_failed": false }
+    ]
+  },
+  "points": { "points": 138, "rate": 1000 },
+  "point_rate": { "token_per_point": 1000 },
+  "point_logs": {
+    "total": 5,
+    "page": 1,
+    "size": 20,
+    "items": [
+      { "id": 5, "delta": 80, "balance_after": 138, "type": "feedback_reward", "ref_id": 1, "description": "反馈奖励（优质反馈）", "created_at": "2026-09-24T08:00:00" },
+      { "id": 4, "delta": -12, "balance_after": 58, "type": "translate", "ref_id": 1, "description": "官方引擎翻译《Pride and Prejudice》", "created_at": "2026-09-20T15:43:20" },
+      { "id": 3, "delta": 10, "balance_after": 70, "type": "checkin", "ref_id": null, "description": "每日签到", "created_at": "2026-09-22T09:30:00" },
+      { "id": 2, "delta": 10, "balance_after": 60, "type": "checkin", "ref_id": null, "description": "每日签到", "created_at": "2026-09-21T09:12:00" },
+      { "id": 1, "delta": 50, "balance_after": 50, "type": "register", "ref_id": null, "description": "新用户注册奖励", "created_at": "2026-09-20T10:12:00" }
+    ]
+  },
+  "checkin": { "points": 148, "reward": 10 },
+  "my_feedback": [
+    { "id": 3, "type": "bug", "title": "上传 PDF 后一直卡在解析中", "body": "上传一个 8MB 的 PDF 后，进度条停在「解析分句」不动了。", "contact": "demo@book.app", "status": "pending", "reward": 0, "created_at": "2026-09-27T20:55:00", "handled_at": null }
+  ],
+  "admin_dashboard": {
+    "users": 3,
+    "users_active": 2,
+    "books": 2,
+    "tasks_running": 0,
+    "today_chars": 186000,
+    "cache_hit_rate": 20.0,
+    "cache_hits": 28,
+    "risk_pending": 1,
+    "last7": [
+      { "date": "09-21", "count": 4 }, { "date": "09-22", "count": 7 }, { "date": "09-23", "count": 5 },
+      { "date": "09-24", "count": 9 }, { "date": "09-25", "count": 12 }, { "date": "09-26", "count": 8 },
+      { "date": "09-27", "count": 13 }
+    ],
+    "engines": [
+      { "id": "official", "name": "官方引擎（积分）", "official": true, "key_fields": [], "enabled": true, "calls": 1284, "char_count": 186000, "fail_rate": 2.1 },
+      { "id": "baidu", "name": "百度翻译", "official": false, "key_fields": [{ "k": "app_id", "label": "App ID", "type": "text" }], "enabled": true, "calls": 268, "char_count": 52000, "fail_rate": 5.6 },
+      { "id": "youdao", "name": "有道智云", "official": false, "key_fields": [], "enabled": true, "calls": 12, "char_count": 4200, "fail_rate": 0 },
+      { "id": "deepl", "name": "DeepL", "official": false, "key_fields": [], "enabled": true, "calls": 4, "char_count": 900, "fail_rate": 0 }
+    ],
+    "latest": [
+      { "id": 1, "title": "Pride and Prejudice", "user": "demo@book.app", "pair": "EN-ZH", "status": "ready", "created_at": "2026-09-20T15:42:00" },
+      { "id": 2, "title": "The Great Gatsby", "user": "chen@mail.cn", "pair": "EN-ZH", "status": "failed", "created_at": "2026-09-25T22:14:00" }
+    ]
+  },
+  "admin_users": {
+    "total": 3,
+    "items": [
+      { "id": 1, "email": "admin@book.app", "nickname": "管理员", "points": 0, "role": "admin", "is_active": true, "ban_reason": null, "created_at": "2026-09-18T08:00:00", "last_login_at": null },
+      { "id": 2, "email": "demo@book.app", "nickname": "演示用户", "points": 138, "role": "user", "is_active": true, "ban_reason": null, "created_at": "2026-09-20T10:12:00", "last_login_at": "2026-09-27T21:02:30" },
+      { "id": 3, "email": "chen@mail.cn", "nickname": "陈叙", "points": 50, "role": "user", "is_active": false, "ban_reason": "积分风控", "created_at": "2026-09-22T11:08:00", "last_login_at": "2026-09-27T19:58:44" }
+    ]
+  },
+  "admin_tasks": {
+    "total": 2,
+    "items": [
+      { "id": 1, "title": "Pride and Prejudice", "user": "demo@book.app", "source_lang": "en", "target_lang": "zh", "engine": "official", "status": "ready", "progress": 100, "char_count": 6240, "cached_segments": 2, "segment_count": 10, "failed_segments": 1, "error_msg": null, "created_at": "2026-09-20T15:42:00", "started_at": "2026-09-20T15:42:05", "finished_at": "2026-09-20T15:43:19" },
+      { "id": 2, "title": "The Great Gatsby", "user": "chen@mail.cn", "source_lang": "en", "target_lang": "zh", "engine": "baidu", "status": "failed", "progress": 38, "char_count": 96200, "cached_segments": 0, "segment_count": 4, "failed_segments": 0, "error_msg": "翻译引擎调用 429 限流（用户密钥额度不足）", "created_at": "2026-09-25T22:14:00", "started_at": "2026-09-25T22:14:04", "finished_at": "2026-09-25T22:16:22" }
+    ]
+  },
+  "admin_cache": {
+    "total": 3,
+    "hits": 25,
+    "hit_rate": 42.6,
+    "items": [
+      { "id": 3, "source_hash": "d81c6e07b5f2a4c3d5e6f708192a3b4c", "src_lang": "fr", "tgt_lang": "zh", "engine": "deepl", "translated_text": "小王子独自生活在一颗非常非常小的星球上，那里只有一座火山……", "hit_count": 5, "created_at": "2026-09-22T14:30:00" },
+      { "id": 2, "source_hash": "7b21d8f4a6e3c9b1d2e3f40516273849", "src_lang": "en", "tgt_lang": "zh", "engine": "official", "translated_text": "不管这样一个人的心情或见解在初进一个地区时多么不为人所知……", "hit_count": 8, "created_at": "2026-09-20T15:44:00" },
+      { "id": 1, "source_hash": "a3f9c2e1f4b7d8c2e3f405162738495a", "src_lang": "en", "tgt_lang": "zh", "engine": "official", "translated_text": "凡是有钱的单身汉，总想娶位太太，这已经成了一条举世公认的真理。", "hit_count": 12, "created_at": "2026-09-20T15:43:00" }
+    ]
+  },
+  "admin_engines": [
+    { "id": "official", "name": "官方引擎（积分）", "official": true, "key_fields": [], "enabled": true, "calls": 1284, "fail_rate": 2.1 },
+    { "id": "baidu", "name": "百度翻译", "official": false, "key_fields": [{ "k": "app_id", "label": "App ID", "type": "text" }, { "k": "app_key", "label": "App Key", "type": "password" }], "enabled": true, "calls": 268, "fail_rate": 5.6 },
+    { "id": "youdao", "name": "有道智云", "official": false, "key_fields": [{ "k": "app_key", "label": "appKey", "type": "text" }], "enabled": true, "calls": 12, "fail_rate": 0 },
+    { "id": "deepl", "name": "DeepL", "official": false, "key_fields": [{ "k": "api_key", "label": "API Key", "type": "password" }], "enabled": true, "calls": 4, "fail_rate": 0 }
+  ],
+  "admin_official": { "official_api_enabled": "1", "token_per_point": 1000, "api_key_masked": "sk-****xxxx" },
+  "admin_points": {
+    "total": 3,
+    "items": [
+      { "id": 1, "email": "admin@book.app", "nickname": "管理员", "points": 0, "role": "admin", "is_active": true, "ban_reason": null, "created_at": "2026-09-18T08:00:00", "log_count": 0 },
+      { "id": 2, "email": "demo@book.app", "nickname": "演示用户", "points": 138, "role": "user", "is_active": true, "ban_reason": null, "created_at": "2026-09-20T10:12:00", "log_count": 5 },
+      { "id": 3, "email": "chen@mail.cn", "nickname": "陈叙", "points": 50, "role": "user", "is_active": false, "ban_reason": "积分风控", "created_at": "2026-09-22T11:08:00", "log_count": 1 }
+    ]
+  },
+  "admin_feedback": {
+    "total": 2,
+    "items": [
+      { "id": 3, "user_id": 2, "user_email": "demo@book.app", "type": "bug", "title": "上传 PDF 后一直卡在解析中", "body": "上传一个 8MB 的 PDF 后，进度条停在「解析分句」不动了。", "contact": "demo@book.app", "status": "pending", "reward": 0, "created_at": "2026-09-27T20:55:00", "handled_at": null },
+      { "id": 1, "user_id": 2, "user_email": "demo@book.app", "type": "experience", "title": "双语对照排版很清晰", "body": "逐段上下对照的排版方式非常清晰，比双栏舒服多了，赞！", "contact": "", "status": "done", "reward": 20, "created_at": "2026-09-24T08:00:00", "handled_at": "2026-09-24T08:00:00" }
+    ]
+  },
+  "admin_risk": {
+    "total": 2,
+    "items": [
+      { "id": 1, "user_id": 3, "user_email": "chen@mail.cn", "user_active": false, "rule": "freq", "detail": "5 分钟内发起 18 次官方引擎翻译请求（阈值 10 次），疑似脚本刷量，已自动封号。", "status": "pending", "resolve": null, "created_at": "2026-09-27T20:44:00", "handled_at": null },
+      { "id": 2, "user_id": 2, "user_email": "demo@book.app", "user_active": true, "rule": "single", "detail": "单次翻译请求预估消耗 620 积分（超过单次上限 500），请求被前置拦截，未实际扣费；复核为误报，已解封。", "status": "resolved", "resolve": "unban", "created_at": "2026-09-27T19:15:00", "handled_at": "2026-09-27T19:22:00" }
+    ]
+  },
+  "admin_notices": [
+    { "id": 3, "type": "maintenance", "title": "计划维护：2026-09-28（周日）23:00–24:00 平台整体升级", "body": "维护公告正文", "is_active": true, "views": 486, "created_at": "2026-09-27T18:30:00", "updated_at": "2026-09-27T18:30:00" },
+    { "id": 2, "type": "update", "title": "新功能：PDF 导出支持自定义页面尺寸与页眉页脚", "body": "版本更新正文", "is_active": true, "views": 1203, "created_at": "2026-09-25T10:12:00", "updated_at": "2026-09-25T10:12:00" },
+    { "id": 1, "type": "system", "title": "安全提示：请妥善保管您的 API Key", "body": "系统通知正文", "is_active": false, "views": 2210, "created_at": "2026-09-20T09:00:00", "updated_at": "2026-09-20T09:00:00" }
+  ],
+  "admin_logs": {
+    "total": 4,
+    "items": [
+      { "id": 4, "level": "ERROR", "module": "engine", "message": "demo@book.app 提供的百度 AppKey 校验失败，已拒绝生成请求（3001）", "created_at": "2026-09-27T20:44:51" },
+      { "id": 3, "level": "WARN", "module": "risk", "message": "风控命中：chen@mail.cn 短时高频触发自动封号，待管理员复核", "created_at": "2026-09-27T20:44:10" },
+      { "id": 2, "level": "INFO", "module": "cache", "message": "定时清理缓存完成：过期 14 条（保留策略 30 天）", "created_at": "2026-09-27T20:31:19" },
+      { "id": 1, "level": "INFO", "module": "auth", "message": "chen@mail.cn 登录成功（IP 112.8.34.102）", "created_at": "2026-09-27T19:58:44" }
+    ]
+  }
+}

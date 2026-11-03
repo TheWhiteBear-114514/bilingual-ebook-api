@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./storage/book.db
+      - SECRET_KEY=${SECRET_KEY:-change-me}
+    volumes:
+      - ../storage:/app/storage
+    restart: unless-stopped

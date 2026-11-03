@@ -1,0 +1,13 @@
+{
+  "name": "bilingual-ebook-contract-mock",
+  "private": true,
+  "version": "1.6.0",
+  "description": "契约仓库自带的 Mock 服务（零依赖 / 可选 Prism）",
+  "scripts": {
+    "mock": "node server.js",
+    "mock:prism": "prism mock ../openapi.json -p 4011 -d"
+  },
+  "devDependencies": {
+    "@stoplight/prism-cli": "^5.12.0"
+  }
+}
